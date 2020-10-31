@@ -15,6 +15,6 @@ Start defaults to the value given in the form.
 the maze itself should be in the form of a 2d array in which every wall and every space is either a 0 (for empty) or a 1 (for a wall).
 For an example of the maze generator go to "https://lulange.github.io/projects/randomMazeGeneration/".
 
-NOTE: the 2d array for the maze should be one more than double the width and height that you entered due to it holding all of the walls as well.
+NOTE: the length of the 2d array for the maze should be one more than double the width and height that you entered due to it holding all of the walls as well.
 
 At the moment, it is up to you to display the maze, but those features will be coming soon.
