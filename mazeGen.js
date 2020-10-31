@@ -86,5 +86,3 @@ class Maze {
     this.maze = boxes;
   }
 }
-
-let maze = new Maze("hello", 25, 25, 100);
