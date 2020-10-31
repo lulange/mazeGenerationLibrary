@@ -1,17 +1,16 @@
 class Maze {
-  constructor(canvasID, width, height, randomness, start) {
-    this.canvas = document.getElementById(canvasID);
+  constructor(width, height, randomness, start) {
     this.width = width || 10;
-    this.height = height || 10;
+    this.height = height || this.width;
     this.randomness = randomness || 10;
     this.start = start || {x: 0, y: 1};
 
 
     let boxes = [];
     let stack = [];
-    for (let i=0; i<this.height; i++) {
+    for (let i=0; i<this.height*2 + 1; i++) {
       boxes.push([]);
-      for (let j=0; j<this.width; j++) {
+      for (let j=0; j<this.width*2 + 1; j++) {
         boxes[i].push(1);
       }
     }
