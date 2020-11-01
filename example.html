@@ -6,12 +6,14 @@
   </head>
   <body>
     <canvas id="canvas" width="400" height="400"></canvas>
-    <script src="mazeGen.js"></script>
+    <script src="mazeGenV1.js"></script>
     <script type="text/javascript">
       // CanvasId, width, height, randomness, start, end
-      let maze = new Maze("canvas", 10, 12, 15, {x: 0, y: 1}, {x: -1, y: -2});
+      let maze = new Maze("canvas", 100, 1000, 15, {x: 0, y: 1}, {x: -1, y: -2});
       // x, y, boxWidth, wallWidth, wallColor, passageColor
-      maze.display(0, 0, 20, 5, "#FF00FF", "#00FF00");
+      canvas.width = maze.getWidth(5, 2);
+      canvas.height = maze.getHeight(5, 2);
+      maze.display(0, 0, 5, 2, "#FF00FF", "#00FF00");
     </script>
   </body>
 </html>
