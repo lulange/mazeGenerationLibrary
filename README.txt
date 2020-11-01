@@ -15,7 +15,7 @@ Start defaults to the value given in the form.
 End is an object in the form: {x: -1, y: -2} that is used to determine the ending point.
 End defaults to the value given in the form and its values are taken off the lengths of the 2d array.
 
-The maze itself should be in the form of a 2d array in which every wall and every space is either a 0 (for empty) or a 1 (for a wall).
+The maze itself should be in the form of a 2d array in which every wall and every space is either a 0 (for empty) or a 1 (for a wall), and should be accessible at maze.maze.
 For an example of the maze generator go to "https://lulange.github.io/projects/randomMazeGeneration/" and to see how it could be used see example.html.
 
 NOTE: the length of the 2d array for the maze should be one more than double the width and height that you entered due to it holding all of the walls as well.
