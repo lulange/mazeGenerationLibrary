@@ -134,4 +134,12 @@ class Maze {
       }
     }
   }
+
+  getWidth(boxWidth, wallWidth) {
+    return Math.round(this.maze[0].length/2) * wallWidth + Math.floor(this.maze[0].length/2) * boxWidth;
+  }
+
+  getHeight(boxWidth, wallWidth) {
+    return Math.round(this.maze.length/2) * wallWidth + Math.floor(this.maze.length/2) * boxWidth;
+  }
 }
