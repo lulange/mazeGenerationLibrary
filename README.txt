@@ -31,4 +31,9 @@ WallColor is the color of the walls in the form: "#000000".
 PassageColor is color of the passages in the form: "#000000".
 
 
+To find the total width of the maze when displayed use maze.getWidth(boxWidth, wallWidth).
+This will return a pixel value equal to the width of the entire maze when displayed using the specified box width and wall width.
+maze.getHeight(boxWidth, wallWidth) is the height equivalent to the width function. 
+
+
 NOTE: The modular maze gen file has the Maze class as its default export.

@@ -9,11 +9,15 @@
     <script src="mazeGenV1.js"></script>
     <script type="text/javascript">
       // CanvasId, width, height, randomness, start, end
-      let maze = new Maze("canvas", 100, 1000, 15, {x: 0, y: 1}, {x: -1, y: -2});
+      let maze = new Maze("canvas", 40, 20, 15, {x: 0, y: 1}, {x: -1, y: -2});
+      let boxWidth = 20;
+      let wallWidth = 4;
+
+      canvas.width = maze.getWidth(boxWidth, wallWidth);
+      canvas.height = maze.getHeight(boxWidth, wallWidth);
+
       // x, y, boxWidth, wallWidth, wallColor, passageColor
-      canvas.width = maze.getWidth(5, 2);
-      canvas.height = maze.getHeight(5, 2);
-      maze.display(0, 0, 5, 2, "#FF00FF", "#00FF00");
+      maze.display(0, 0, boxWidth, wallWidth, "#FF00FF", "#00FF00");
     </script>
   </body>
 </html>
