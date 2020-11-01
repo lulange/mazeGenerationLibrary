@@ -27,3 +27,6 @@ X is the x coordinate of the starting point from which the maze will be drawn.
 Y is the y coordinate of the starting point from which the maze will be drawn.
 BoxWidth is the width of the spaces in the maze.
 WallWidth is the width of the walls in the maze.
+
+
+NOTE: The modular maze gen file has the Maze class as its default export.
