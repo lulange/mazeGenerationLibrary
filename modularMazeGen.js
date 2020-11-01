@@ -99,12 +99,18 @@ export default class Maze {
     }
   }
 
-  display(x, y, boxWidth, wallWidth) {
-    this.ctx.fillStyle = "black";
+  display(x, y, boxWidth, wallWidth, wallColor, passageColor) {
+    if (passageColor === undefined || passageColor === null) {
+      passageColor = "white";
+    }
+    if (wallColor === undefined || wallColor === null) {
+      wallColor = "black";
+    }
+    this.ctx.fillStyle = wallColor;
     let totalHeight = Math.round(this.maze.length/2) * wallWidth + Math.floor(this.maze.length/2) * boxWidth;
     let totalWidth = Math.round(this.maze[0].length/2) * wallWidth + Math.floor(this.maze[0].length/2) * boxWidth;
     this.ctx.fillRect(x, y, totalWidth, totalHeight);
-    this.ctx.fillStyle = "white";
+    this.ctx.fillStyle = passageColor;
     for (let i=0; i<this.maze.length; i++) {
       for (let j=0; j<this.maze[0].length; j++) {
         if (this.maze[i][j] === 0) {

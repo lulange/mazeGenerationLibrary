@@ -21,12 +21,14 @@ For an example of the maze generator go to "https://lulange.github.io/projects/r
 NOTE: the length of the 2d array for the maze should be one more than double the width and height that you entered due to it holding all of the walls as well.
 
 
-To display the maze, use maze.display(x, y, boxWidth, wallWidth);
+To display the maze, use maze.display(x, y, boxWidth, wallWidth, wallColor, passageColor);
 
 X is the x coordinate of the starting point from which the maze will be drawn.
 Y is the y coordinate of the starting point from which the maze will be drawn.
 BoxWidth is the width of the spaces in the maze.
 WallWidth is the width of the walls in the maze.
+WallColor is the color of the walls in the form: "#000000".
+PassageColor is color of the passages in the form: "#000000".
 
 
 NOTE: The modular maze gen file has the Maze class as its default export.
