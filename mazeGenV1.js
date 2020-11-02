@@ -118,16 +118,16 @@ class Maze {
           let verticalWall = j % 2 === 0 ? true : false;
 
           if (!verticalWall && !horizontalWall) {
-            let pixelX = (j+1)/2 * wallWidth + (j-1)/2 * boxWidth;
-            let pixelY = (i+1)/2 * wallWidth + (i-1)/2 * boxWidth;
+            let pixelX = x + (j+1)/2 * wallWidth + (j-1)/2 * boxWidth;
+            let pixelY = y + (i+1)/2 * wallWidth + (i-1)/2 * boxWidth;
             this.ctx.fillRect(pixelX, pixelY, boxWidth, boxWidth);
           } else if (verticalWall) {
-            let pixelX = (j/2) * wallWidth + (j/2) * boxWidth;
-            let pixelY = (i+1)/2 * wallWidth + (i-1)/2 * boxWidth;
+            let pixelX = x + (j/2) * wallWidth + (j/2) * boxWidth;
+            let pixelY = y + (i+1)/2 * wallWidth + (i-1)/2 * boxWidth;
             this.ctx.fillRect(pixelX, pixelY, wallWidth, boxWidth);
           } else {
-            let pixelX = (j+1)/2 * wallWidth + (j-1)/2 * boxWidth;
-            let pixelY = (i/2) * wallWidth + (i/2) * boxWidth;
+            let pixelX = x + (j+1)/2 * wallWidth + (j-1)/2 * boxWidth;
+            let pixelY = y + (i/2) * wallWidth + (i/2) * boxWidth;
             this.ctx.fillRect(pixelX, pixelY, boxWidth, wallWidth);
           }
         }
