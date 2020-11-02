@@ -142,4 +142,8 @@ class Maze {
   getHeight(boxWidth, wallWidth) {
     return Math.round(this.maze.length/2) * wallWidth + Math.floor(this.maze.length/2) * boxWidth;
   }
+
+  getPixelCoor(startX, startY, boxWidth, wallWidth, x, y) {
+    return {x: startX + (x+1)/2 * wallWidth + (x-1)/2 * boxWidth, y: startY + (y+1)/2 * wallWidth + (y-1)/2 * boxWidth};
+  }
 }
