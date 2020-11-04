@@ -15,11 +15,13 @@
       let boxWidth = 20;
       let wallWidth = 4;
 
-      canvas.width = maze.getWidth(boxWidth, wallWidth);
-      canvas.height = maze.getHeight(boxWidth, wallWidth);
+      canvas.width = maze.getWidth(boxWidth, wallWidth) + 40;
+      canvas.height = maze.getHeight(boxWidth, wallWidth) + 40;
 
       // x, y, boxWidth, wallWidth, wallColor, passageColor
-      maze.display(0, 0, boxWidth, wallWidth, "#8B4513", "#00FF00");
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      maze.display(20, 20, boxWidth, wallWidth, "#4666FF", "#000000");
 
       // draw a black dot on (5, 5) in the maze.maze variable
       // startX, startY, boxWidth, wallWidth, x, y
