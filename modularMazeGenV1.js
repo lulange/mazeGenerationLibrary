@@ -1,7 +1,6 @@
 export default class Maze {
-  constructor(canvasID, width, height, randomness, start, end) {
-    this._canvas = document.getElementById(canvasID);
-    this._ctx = canvas.getContext("2d");
+  constructor(ctx, width, height, randomness, start, end) {
+    this._ctx = ctx;
     this._width = width || 10;
     this._height = height || this._width;
     this._randomness = randomness || 10;
@@ -165,10 +164,6 @@ export default class Maze {
 
   get maze() {
     return this._maze;
-  }
-
-  get canvas() {
-    return this._canvas;
   }
 
   get height() {

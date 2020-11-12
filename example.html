@@ -12,7 +12,7 @@
       // CanvasId, width, height, randomness, start, end
       let canvas = document.getElementById("canvas");
       let ctx = canvas.getContext("2d");
-      let maze = new Maze("canvas", 40, 20, 15, {x: 0, y: 1}, {x: -1, y: -2});
+      let maze = new Maze(ctx, 40, 20, 15, {x: 0, y: 1}, {x: -1, y: -2});
       let boxWidth = 20;
       let wallWidth = 4;
 

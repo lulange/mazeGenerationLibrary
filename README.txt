@@ -4,9 +4,9 @@ Currently, the syntax to use it is very simple.
 There is only one class in mazeGen.js named Maze.
 To generate a maze, use:
 
-let maze = new Maze(canvasID [, width] [, height] [, randomness] [, start]);
+let maze = new Maze(ctx [, width] [, height] [, randomness] [, start]);
 
-canvasID is the ID of the canvas that the maze should be drawn on.
+ctx is the 2d canvas rendering context used for drawing
 Width is the width of the maze and defaults to 10.
 Height is the height of the maze and defaults to the width.
 Randomness is the percent randomness used to generate the maze and defaults to 10.
